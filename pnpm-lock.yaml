@@ -17,6 +17,9 @@ importers:
       json-server:
         specifier: 1.0.0-beta.15
         version: 1.0.0-beta.15
+      material-icons:
+        specifier: ^1.13.14
+        version: 1.13.14
     devDependencies:
       vite:
         specifier: ^8.0.12
@@ -448,6 +451,9 @@ packages:
   lowdb@7.0.1:
     resolution: {integrity: sha512-neJAj8GwF0e8EpycYIDFqEPcx9Qz4GUho20jWFR7YiFeXzF1YMLdxB36PypcTSPMA+4+LvgyMacYhlr18Zlymw==}
     engines: {node: '>=18'}
+
+  material-icons@1.13.14:
+    resolution: {integrity: sha512-kZOfc7xCC0rAT8Q3DQixYAeT+tBqZnxkseQtp2bxBxz7q5pMAC+wmit7vJn1g/l7wRU+HEPq23gER4iPjGs5Cg==}
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -958,6 +964,8 @@ snapshots:
   lowdb@7.0.1:
     dependencies:
       steno: 4.0.2
+
+  material-icons@1.13.14: {}
 
   math-intrinsics@1.1.0: {}
 
