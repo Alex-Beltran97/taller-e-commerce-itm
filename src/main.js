@@ -10,6 +10,7 @@ const pathBase = segments[0] ? String(segments[0]).toLowerCase() : 'home';
 const navigator = document.querySelectorAll('header nav a');
 
 import initPageNotFoundModule from './modules/page-not-found';
+import initProductsListModule from './modules/products-list';
 
 const paths = {
   "home": "/",
@@ -22,6 +23,7 @@ const paths = {
 switch (pathBase) {
   case paths.home:
     handleNavigation("inicio");
+    await initProductsListModule();
     break;
   case paths.product:
     break;
