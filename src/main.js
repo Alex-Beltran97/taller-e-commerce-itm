@@ -9,6 +9,8 @@ const pathBase = segments[0] ? String(segments[0]).toLowerCase() : 'home';
 
 const navigator = document.querySelectorAll('header nav a');
 
+import initPageNotFoundModule from './modules/page-not-found';
+
 const paths = {
   "home": "/",
   "home": "home",
@@ -30,6 +32,7 @@ switch (pathBase) {
     handleNavigation("contactanos");
     break;
   default:
+    initPageNotFoundModule();
     break;
 };
 
