@@ -1,60 +1,51 @@
-import './style.css'
-import javascriptLogo from './assets/javascript.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import { setupCounter } from './counter.js'
+import './style.css';
+import 'material-icons/iconfont/material-icons.css';
 
-document.querySelector('#app').innerHTML = `
-<section id="center">
-  <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${javascriptLogo}" class="framework" alt="JavaScript logo"/>
-    <img src="${viteLogo}" class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/main.js</code> and save to test <code>HMR</code></p>
-  </div>
-  <button id="counter" type="button" class="counter"></button>
-</section>
+const URL_PATH = window.location.href;
+const urlObj = new URL(URL_PATH);
+const segments = urlObj.pathname.split('/').filter(Boolean);
 
-<div class="ticks"></div>
+const pathBase = segments[0] ? String(segments[0]).toLowerCase() : 'home';
 
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
-    <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src="${viteLogo}" alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-          <img class="button-icon" src="${javascriptLogo}" alt="">
-          Learn more
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
+const navigator = document.querySelectorAll('header nav a');
 
-<div class="ticks"></div>
-<section id="spacer"></section>
-`
+import initPageNotFoundModule from './modules/page-not-found';
+import initProductsListModule from './modules/products-list';
+import initDetailProductModule from './modules/detail-product';
+import initAboutUsModule from './modules/about-us';
+import initContactUsModule from './modules/contact-us';
 
-setupCounter(document.querySelector('#counter'))
+const paths = {
+  "home": "/",
+  "home": "home",
+  "product": "product",
+  "about": "about-us",
+  "contact": "contact-us",
+};
+
+switch (pathBase) {
+  case paths.home:
+    handleNavigation("inicio");
+    await initProductsListModule();
+    break;
+  case paths.product:
+    await initDetailProductModule(); 
+    break;
+  case paths.about:
+    handleNavigation("¿quiénes somos?");
+    initAboutUsModule();
+    break;
+  case paths.contact:
+    handleNavigation("contactanos");
+    initContactUsModule();
+    break;
+  default:
+    initPageNotFoundModule();
+    break;
+};
+
+function handleNavigation(tabName) {  
+  const tab = Array.from(navigator).find(element => element.innerHTML.toLowerCase().includes(tabName));
+  if (!tab?.classList) return;
+  tab.classList.add('navigator__item--active');
+};

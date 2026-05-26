@@ -1,0 +1,113 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Memoria USB 128GB",
+            "price": 45000,
+            "label": "Unidad flash USB de alta velocidad",
+            "description": "Almacena y transfiere tus archivos rápidamente con esta memoria USB compacta y confiable. Su diseño resistente sin tapa y con carcasa metálica es ideal para llevar a cualquier parte en tu llavero. Compatible con puertos estándar para portátiles y equipos de escritorio.",
+            "types": [
+                {
+                    "image": "https://res.cloudinary.com/duzyd4ju7/image/upload/v1779348075/usb1_sz8hfo.jpg",
+                    "color": "Negro",
+                    "hex-value": "#000"
+                },
+                {
+                    "image": "https://res.cloudinary.com/duzyd4ju7/image/upload/v1779348076/usb2_hyeabj.jpg",
+                    "color": "Azul",
+                    "hex-value": "#0CBFE7"
+                },
+                {
+                    "image": "https://res.cloudinary.com/duzyd4ju7/image/upload/v1779348076/usb3_maapyk.jpg",
+                    "color": "Verde",
+                    "hex-value": "#B3D5BD"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Hub USB-C",
+            "price": 85000,
+            "label": "Adaptador multipuerto 8 en 1",
+            "description": "Amplía la conectividad de tu equipo con este Hub USB-C de aluminio. Incluye puerto HDMI para video en alta resolución, múltiples puertos USB tipo A, lector de tarjetas SD y puerto de carga de suministro de energía (PD). Diseño compacto ideal para llevar en la mochila.",
+            "types": [
+                {
+                    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-MaQ_z7h5_zdHXvJTyggKJ94PopNPk8tc_A&s",
+                    "color": "Azul",
+                    "hex-value": "#001dff"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Funda Protectora",
+            "price": 55000,
+            "label": "Funda rígida para laptop",
+            "description": "Carcasa protectora de policarbonato diseñada para encajar a la perfección y proteger contra rayones y golpes diarios. Cuenta con un acabado mate translúcido, patas de goma antideslizantes para mayor estabilidad y ranuras en la base para una correcta disipación del calor.",
+            "types": [
+                {
+                    "image": "https://res.cloudinary.com/duzyd4ju7/image/upload/v1779346934/Gemini_Generated_Image_exe76bexe76bexe7_xomhiz.png",
+                    "color": "Rojo",
+                    "hex-value": "#ff0000"
+                },
+                {
+                    "image": "https://res.cloudinary.com/duzyd4ju7/image/upload/v1779346992/Gemini_Generated_Image_nr8v10nr8v10nr8v_dzstvo.png",
+                    "color": "Azul",
+                    "hex-value": "#001dff"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Correa Metálica",
+            "price": 35000,
+            "label": "Correa de repuesto para smartwatch",
+            "description": "Personaliza tu reloj inteligente con esta elegante correa de malla metálica de acero inoxidable. Su diseño flexible y transpirable la hace cómoda para el uso diario. Incorpora un cierre magnético de sujeción fuerte que permite ajustarla a cualquier tamaño de muñeca fácilmente.",
+            "types": [
+                {
+                    "image": "https://http2.mlstatic.com/D_NQ_NP_620805-MCO51933734819_102022-O.webp",
+                    "color": "Plateado",
+                    "hex-value": "#CCC"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Teclado Mecánico",
+            "price": 180000,
+            "label": "Teclado compacto Bluetooth",
+            "description": "Teclado formato 65% que optimiza el espacio en el escritorio sin sacrificar funcionalidad. Switches táctiles silenciosos, retroiluminación personalizable y conectividad inalámbrica multidispositivo para alternar entre computadora, tablet y teléfono con un solo botón.",
+            "types": [
+                {
+                    "image": "https://cdnx.jumpseller.com/tienda-gamer-medellin/image/15973402/71sFaDtowqL._AC_SL1500_.jpg?1679019012",
+                    "color": "Varios",
+                    "hex-value": "#FFF"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Ratón Ergonómico",
+            "price": 95000,
+            "label": "Ratón inalámbrico vertical",
+            "description": "Diseño vertical que promueve una postura natural de la mano y la muñeca, reduciendo la tensión muscular tras horas de uso. Cuenta con botones de avance/retroceso, rueda de desplazamiento suave, sensor óptico de alta precisión y batería recargable de larga duración.",
+            "types": [
+                {
+                    "image": "https://exitocol.vtexassets.com/arquivos/ids/24287007/mouse-ergonomico-vertical-inalambrico-24g-recargable-usb.jpg?v=638604580099270000",
+                    "color": "Negro",
+                    "hex-value": "#000"
+                },
+                {
+                    "image": "https://res.cloudinary.com/duzyd4ju7/image/upload/v1779347507/Gemini_Generated_Image_igelm2igelm2igel_aolg5n.png",
+                    "color": "Blanco",
+                    "hex-value": "#FFF"
+                },
+                {
+                    "image": "https://res.cloudinary.com/duzyd4ju7/image/upload/v1779347588/Gemini_Generated_Image_ufgb3aufgb3aufgb_ad083d.png",
+                    "color": "Rosa",
+                    "hex-value": "#DEACAF"
+                }
+            ]
+        }
+    ]
+}
