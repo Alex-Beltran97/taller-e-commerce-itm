@@ -11,6 +11,7 @@ const navigator = document.querySelectorAll('header nav a');
 
 import initPageNotFoundModule from './modules/page-not-found';
 import initProductsListModule from './modules/products-list';
+import initDetailProductModule from './modules/detail-product';
 
 const paths = {
   "home": "/",
@@ -26,6 +27,7 @@ switch (pathBase) {
     await initProductsListModule();
     break;
   case paths.product:
+    await initDetailProductModule(); 
     break;
   case paths.about:
     handleNavigation("¿quiénes somos?");
