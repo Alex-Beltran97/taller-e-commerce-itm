@@ -1,5 +1,5 @@
-import { getProducts } from '../../api/productServices';
 import './index.css';
+import {getProducts} from "../../api/products-service";
 
 function renderProductsListModule(products) {
   return `
@@ -11,31 +11,31 @@ function renderProductsListModule(products) {
       <article class="products-list__item products-list__item--catalog">
         <h3 class="catalog__item catalog__item--title">Catalogo de productos</h3>
         <div class="catalog__item catalog__item--product-container">
-          ${products.map(product => productTpl(product)).join('')}                  
+          ${products.map(product => productTpl(product)).join('')}
         </div>
       </article>
     </section>
   `;
 };
 
-function productTpl(product) {
-  const firstType = product.types[0];
+function productTpl({id, name, price, label, description, types}) {
+  const firstProduct = types[0];
   return `
-    <a id="${product.id}" href="#" class="product-container__item product-container__item--product">
+    <a id="${id}" href="/product/${id}" class="product-container__item product-container__item--product">
       <figure class="product__item product__item--image">
-        <img src="${firstType.image}" alt="${product.name}" />
+        <img src="${firstProduct.image}" alt="${name}" />
       </figure>
       <div class="product__item product__item--details">
-        <h4 class="details__item details__item--title">${product.name}</h4>
-        <b class="details__item details__item--price">$${product.price}</b>
-        <p class="details__item details__item--description">${product.label}</p>
+        <h4 class="details__item details__item--title">${name}</h4>
+        <b class="details__item details__item--price">$${price}</b>
+        <p class="details__item details__item--description">${label}</p>
       </div>
     </a>
   `;
 }
 
 async function initProductsListModule() {
-  const products = await getProducts();
+  const products = await getProducts();  
   const html = renderProductsListModule(products);  
   document.querySelector('#app').innerHTML = html;  
 };
