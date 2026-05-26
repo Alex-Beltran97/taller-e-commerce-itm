@@ -13,6 +13,7 @@ import initPageNotFoundModule from './modules/page-not-found';
 import initProductsListModule from './modules/products-list';
 import initDetailProductModule from './modules/detail-product';
 import initAboutUsModule from './modules/about-us';
+import initContactUsModule from './modules/contact-us';
 
 const paths = {
   "home": "/",
@@ -36,6 +37,7 @@ switch (pathBase) {
     break;
   case paths.contact:
     handleNavigation("contactanos");
+    initContactUsModule();
     break;
   default:
     initPageNotFoundModule();
