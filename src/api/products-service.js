@@ -11,3 +11,13 @@ export async function getProducts() {
     throw error;
   }
 };
+
+export async function getProductById(id) {
+  try {
+    const response = await http.get(`${enpoint}/${id}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error fetching product by ID ${id}:`, error);
+    throw error;
+  }
+};
